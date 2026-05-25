@@ -6,7 +6,7 @@ let applyBtn=document.querySelector('.applyBtn')
 
 const changeColor=(color)=>{
     container.style.backgroundColor=color;
-   
+    currentColorValue.innerText=color;
 }
 
 

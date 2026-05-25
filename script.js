@@ -9,14 +9,20 @@ const changeColor=(color)=>{
     currentColorValue.innerText=color;
 }
 
+let colorArray=["red","green","blue","tomato","white","black","beige","aqua","azure","brown","#f4f4f4"];
 
+const generateRandomColor=()=>{
+    let randomNumber=Math.floor(Math.random()*colorArray.length);
+    return colorArray[randomNumber]
+}
 
 const handleApplyBtn=()=>{
     let color=inputColor.value;
     changeColor(color);
 }
 const handleRandomyBtn=()=>{
-    console.log('random') 
+ let color= generateRandomColor();
+   changeColor(color)
 }
 randomBtn.addEventListener('click',handleRandomyBtn)
 applyBtn.addEventListener('click',handleApplyBtn)
